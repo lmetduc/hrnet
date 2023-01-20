@@ -1,0 +1,63 @@
+h1 {
+    font-size: 40px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+    width: 60%;
+    height: auto;
+    border-radius: 15px;
+    margin: 40px auto;
+    box-shadow: 10px 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width : 150px
+}
+
+.second-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hrnet-button {
+    width:120px;
+    border-radius: 40px;
+    background: green;
+    color: white;
+
+}
+
+button {
+    width:120px;
+    border-radius: 40px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+}
+
+input {
+    border-radius: 40px;
+    padding: 4px;
+    margin:2px;
+    width: 300px;
+    height:24px;
+
+}
