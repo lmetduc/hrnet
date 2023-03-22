@@ -1,16 +1,21 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import CreateEmployee from "../pages/CreateEmployee/CreateEmployee";
-// import EmployeeList from "../pages/EmployeeList/EmployeeList";
-// import Error from "../pages/Error/Error";
+import { Routes, Route } from "react-router-dom";
+import React from "react";
+import CreateEmployee from "../CreateEmployee/CreateEmployee";
+import EmployeeList from "../EmployeeList/EmployeeList";
+import Error from "../Error/Error";
 
-// export default function createRouter() {
-//   return (
-//       <BrowserRouter>
-//         <Routes>
-//           <Route path="/" element={<CreateEmployee />} />
-//           <Route path="/employeeList" element={<EmployeeList />} />
-//           <Route path="*" element={<Error />} />
-//         </Routes>
-//       </BrowserRouter>
-//   );
-// }
+ function Router() {
+
+  
+
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<CreateEmployee />} />
+        <Route path="/employeeList" element={<EmployeeList />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </div>
+  );
+}
+export default Router;

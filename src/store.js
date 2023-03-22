@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
 
-import hrnetReducer from './features/hrnet';
+import createEmployeeReducer from './features/employee';
 
 export const store = configureStore({
     reducer: {
-        toto: hrnetReducer
+        createEmployee: createEmployeeReducer
     }
 })

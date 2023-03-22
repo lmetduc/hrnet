@@ -1,56 +1,60 @@
 import "./employeeList.css";
 import React from "react";
 import { useTable, useSortBy } from "react-table";
+import { useSelector } from "react-redux";
 import Header from "../../components/Header/Header";
 
 export default function EmployeeList() {
+
+  const testData = useSelector((state) => state.createEmployee);
+
   const data = React.useMemo(
-    () => [
-      {
-        col1: "Hello",
-        col2: "World",
-      },
-    ],
-    []
+    () => testData.value, [testData.value]
+    //   {
+    //     col1: "Hello",
+    //     col2: "World",
+    //   },
+    // ],
+    // []
   );
 
   const columns = React.useMemo(
     () => [
       {
         Header: "First name",
-        accessor: "col1", // accessor is the "key" in the data
+        accessor: "firstName", // accessor is the "key" in the data
       },
       {
         Header: "Last name",
-        accessor: "col2",
+        accessor: "lastName",
       },
       {
         Header: "Start Date",
-        accessor: "col3",
+        accessor: "startDate",
       },
       {
         Header: "Department",
-        accessor: "col4",
+        accessor: "department",
       },
       {
         Header: "Date Of Birth",
-        accessor: "col5",
+        accessor: "birthDate",
       },
       {
         Header: "Street",
-        accessor: "col6",
+        accessor: "streetAddress",
       },
       {
         Header: "City",
-        accessor: "col7",
+        accessor: "cityAddress",
       },
       {
         Header: "State",
-        accessor: "col8",
+        accessor: "stateAddress",
       },
       {
         Header: "Zip code",
-        accessor: "col9",
+        accessor: "zipCode",
       },
     ],
     []
