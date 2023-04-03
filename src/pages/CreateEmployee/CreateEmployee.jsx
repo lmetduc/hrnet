@@ -4,8 +4,10 @@ import Header from "../../components/Header/Header";
 import { useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { addNewUser } from "../../features/employee";
-import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import MyDropdown from "../../components/Dropdown/Dropdown";
+import Example from "../../components/Example/example";
+import Listbox1 from "../../components/Listbox/listbox";
 
 // import dep from '../../assets/datas/dep.json';
 
@@ -91,13 +93,13 @@ export default function CreateEmployee() {
 
   return (
     <div className="main">
-      <DatePicker selected={startDateInput} onChange={(date) => setStartDateInput(date)} />
       <Header goTo="View Current Employees" link="/employeelist" />
       <div className="body">
         <h1>Create Employees</h1>
 
         <div className="main-page">
           <form className="main-form" onSubmit={handleSubmitForm}>
+            <div className="first-form">
             <div className="label">
               <label>First Name</label>
               <input
@@ -127,6 +129,7 @@ export default function CreateEmployee() {
                 onChange={(e) => setBirthDateInput(e.target.value)}
               ></input>
             </div>
+            </div>
 
             <div className="label">
               <label>Start Date</label>
@@ -136,13 +139,12 @@ export default function CreateEmployee() {
                 className="input"
                 onChange={(e) => setStartDateInput(e.target.value)}
               ></input>
-              <DatePicker selected={startDateInput} onChange={(date) => setStartDateInput(date)} />
             </div>
 
             <div className="second-form">
-              <duv className="name-adress">
+              <div className="name-adress">
               Address
-              </duv>
+              </div>
 
               <div className="label">
                 <label>Street</label>
@@ -189,6 +191,10 @@ export default function CreateEmployee() {
                 ></input>
               </div>
             </div>
+
+            <MyDropdown />
+            <Example />
+            {/* <Listbox1 /> */}
             <div className="label">
               <label>Department</label>
               <select
